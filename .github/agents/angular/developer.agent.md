@@ -31,6 +31,7 @@ Follow these as the source of truth:
 
 - Angular: https://angular.dev/llms.txt
 - TypeScript: https://google.github.io/styleguide/tsguide.html
+- PrimeNG: https://primeng.org/llms/llms.txt
 
 If a pattern conflicts with these docs, **the docs win**.
 
