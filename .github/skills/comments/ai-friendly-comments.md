@@ -1,0 +1,11 @@
+# AI-Friendly Comment Points
+- **Function purpose** — one-liner on *what it returns/achieves*, not how
+- **Data shape** — key fields of any input/output object AI might hallucinate
+- **Source of truth** — point to store/service if local var mirrors global state
+- **Enum meaning** — map values to domain meaning (`PENDING=0 | ACTIVE=1`)
+- **Validation intent** — state the business rule, not the regex
+- **Route map** — full URL tree near route constants
+- **i18n key → message** — what the user actually sees for each error key
+- **API contract** — `METHOD /path → ResponseShape` before HTTP calls
+- **Don't comment** — control flow, framework APIs, obvious logic (your Copilot rules still apply)
+- **Golden rule** — comment domain knowledge, not code. AI reads syntax, not your mind.
