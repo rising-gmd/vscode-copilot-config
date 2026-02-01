@@ -614,6 +614,14 @@ Everything else lives in unit and integration tests.
 
 ---
 
+### When to use Jest or Playwright
+- Use **Jest + Testing Library** for all unit and integration tests. If the test can run in a Node environment without a real browser, it belongs here.
+- Use **Playwright** for all end-to-end tests that require a real browser, full navigation, or real network requests.
+- If you are unsure which to use, default to Jest. It is faster, more reliable, and easier to maintain.
+- If a feature requires both unit tests and E2E tests, write both. Test the internal logic with Jest and the user journey with Playwright.
+- Avoid duplicating test scenarios across both layers. Each layer has its own purpose.
+- When in doubt, ask a senior engineer for guidance on the appropriate testing layer.
+
 ## Pre-Submit Checklist
 
 1. `npm run test:jest` — zero failures, zero console errors.

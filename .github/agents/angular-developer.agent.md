@@ -184,22 +184,16 @@ All output must pass **AXE** and **WCAG AA**.
 
 ## Comments Policy
 
-**Default: no comments.** Documentation explains *why*, never *what*.
-
-**Forbidden:**
-- Narrating control flow or obvious code
-- Explaining framework APIs (`// initialize state`, `// call service`, `// handle click`)
-- File-level headers
-- JSDoc on components, services, inputs/outputs, simple methods
-
-**Required only when:**
-- Logic encodes non-obvious business rules
-- A tradeoff was made (performance, correctness, compatibility)
-- Code intentionally deviates from the expected pattern
-- A workaround exists for a framework/browser/library limitation
-- A constraint exists that future maintainers might unknowingly violate
-
-When required: one short inline comment explaining the *reason*, not the implementation.
+- Function purpose — one-liner on what it returns/achieves, not how
+- Data shape — key fields of any input/output object AI might hallucinate
+- Source of truth — point to store/service if local var mirrors global state
+- Enum meaning — map values to domain meaning (PENDING=0 | ACTIVE=1)
+- Validation intent — state the business rule, not the regex
+- Route map — full URL tree near route constants
+- i18n key → message — what the user actually sees for each error key
+- API contract — METHOD /path → ResponseShape before HTTP calls
+- Don't comment — control flow, framework APIs, obvious logic (your Copilot rules still apply)
+- Golden rule — comment domain knowledge, not code. AI reads syntax, not your mind.
 
 ---
 
